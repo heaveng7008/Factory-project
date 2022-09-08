@@ -8,5 +8,5 @@ class Company{
     Company();
     void setName(string name);
     string getName();
-    void addCustomer(Customer *customer);
+    void addCustomer();
 }
