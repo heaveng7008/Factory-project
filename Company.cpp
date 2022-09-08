@@ -1,6 +1,7 @@
 #include "Customer.h"
 #include "RegCustomer.h"
 #include "Company.h"
+#include "MembershipFactory.h"
 
 Company::Company(){ 
     //empty
@@ -16,7 +17,7 @@ string Company::getName()
     return _name;
 }
 
-void membership(Customer* cus);
+void membership(RegCustomer* cus);
 
 void Company::addCustomer(){
     std::string name, id;
@@ -28,25 +29,28 @@ void Company::addCustomer(){
     char choice;
     std::cin>>choice;
         
-    Customer *cus;
+    Customer *cus = new Customer();
         
     if(choice == 'y'){
 
         // RegCustomer* reg = new RegCustomer();
         // cus = dynamic_cast<Customer *> (reg); //upcasting
 
-        RegCustomer *reg = new RegCustomer();
-        cus = reg;
+        // RegCustomer *reg = new RegCustomer();
+        // cus = reg;
 
         std::string dtReg;
         std::cout<<"Enter Date of registration: "<<std::endl;
         std::cin>>dtReg;
-        cus->setDtReg(dtReg);
-        membership(cus);
+
+        RegCustomer *rcc= dynamic_cast<RegCustomer *>(cus);
+        rcc->setDtReg(dtReg);
+        membership(rcc);
+
+
     }
-    else{
-        cus = new Customer();
-    }
+
+
     cus->setCustId(id);
     cus->setName(name);
 
@@ -58,7 +62,7 @@ void Company::addCustomer(){
 
 }
 
-void membership(Customer* cus){
+void membership(RegCustomer* cus){
     int choice;
     std::cout<<"Enter type of Membership: "<<std::endl;
     cout<<" 1. Silver \t Discount: 10 \t Fees: 200 \n 2. Gold \t Discount: 15 \t Fees: 500 \n 3. Platinum \t Discount: 20 \t Fees: 800"<<endl;

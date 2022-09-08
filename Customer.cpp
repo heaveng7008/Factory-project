@@ -1,5 +1,9 @@
 #include "Customer.h"
 
+Customer::Customer(){
+
+}
+
 string Customer::getCustId()
 {
     return _custId;
@@ -19,3 +23,5 @@ void Customer::setName(string name)
 {
     _name = name;
 }
+
+
