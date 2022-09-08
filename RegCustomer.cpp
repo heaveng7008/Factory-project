@@ -19,3 +19,7 @@ void RegCustomer::setMembership(Membership membership)
 {
     _membership = membership;
 }
+
+Membership RegCustomer::getMembership(){
+    return _membership;
+}
