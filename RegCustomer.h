@@ -15,6 +15,7 @@ class RegCustomer : public Customer{
     string getDtReg();
     void setDtReg(string dtReg);
     void setMembership(Membership membership);
+    Membership getMembership();
 
 
     //email

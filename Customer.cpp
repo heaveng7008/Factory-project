@@ -24,4 +24,12 @@ void Customer::setName(string name)
     _name = name;
 }
 
+void Customer::setEmail(string email)
+{
+   _email=email;
+}
 
+string Customer::getEmail(){
+
+    return _email;
+}
