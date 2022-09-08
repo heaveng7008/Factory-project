@@ -13,4 +13,5 @@ class Customer{
     void setCustId(string custId);
     void setName(string name);
     string getName();
+    virtual ~Customer(){}
 };
