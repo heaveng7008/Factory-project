@@ -1,3 +1,5 @@
+#pragma once
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -9,4 +11,6 @@ class Company{
     void setName(string name);
     string getName();
     void addCustomer();
-}
+
+    void displayCustomers();
+};

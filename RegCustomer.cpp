@@ -17,5 +17,5 @@ void RegCustomer::setDtReg(string dtReg)
 
 void RegCustomer::setMembership(Membership membership)
 {
-    
+    _membership = membership;
 }

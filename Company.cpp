@@ -16,6 +16,8 @@ string Company::getName()
     return _name;
 }
 
+void membership(Customer* cus);
+
 void Company::addCustomer(){
     std::string name, id;
     std::cout<<"Enter name"<<std::endl;
@@ -30,10 +32,13 @@ void Company::addCustomer(){
         
     if(choice == 'y'){
 
-        cus = new Reg_Customer(name, id); //upcasting
+        // RegCustomer* reg = new RegCustomer();
+        // cus = dynamic_cast<Customer *> (reg); //upcasting
+
+        RegCustomer *reg = new RegCustomer();
+        cus = reg;
 
         std::string dtReg;
-        std::string typeOfMembership;
         std::cout<<"Enter Date of registration: "<<std::endl;
         std::cin>>dtReg;
         cus->setDtReg(dtReg);
@@ -42,9 +47,9 @@ void Company::addCustomer(){
     else{
         cus = new Customer();
     }
-
     cus->setCustId(id);
     cus->setName(name);
+
     //cus->setEmail
 
     _customers.push_back(cus);
@@ -56,9 +61,7 @@ void Company::addCustomer(){
 void membership(Customer* cus){
     int choice;
     std::cout<<"Enter type of Membership: "<<std::endl;
-    cout<<" 1. Silver \t Discount: 10 \t Fees: 200 \n 
-            2. Gold \t Discount: 15 \t Fees: 500 \n 
-            3. Platinum \t Discount: 20 \t Fees: 800"<<endl;
+    cout<<" 1. Silver \t Discount: 10 \t Fees: 200 \n 2. Gold \t Discount: 15 \t Fees: 500 \n 3. Platinum \t Discount: 20 \t Fees: 800"<<endl;
 
     switch(choice){
         case 1:
@@ -74,4 +77,8 @@ void membership(Customer* cus){
             std:cout<<"Undefined Choice. Please Enter Again! "<<endl;
             membership(cus);
     }
+}
+
+void Company::displayCustomers(){
+    std::cout<<"hello";
 }
