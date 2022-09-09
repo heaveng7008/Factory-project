@@ -26,3 +26,7 @@
     Membership MembershipFactory::getMembership(string typeOfMembership){
         return pool[typeOfMembership];
     }
+
+    MembershipFactory::~Membership(){
+      delete MembershipFactory::instance;
+    }

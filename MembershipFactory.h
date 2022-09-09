@@ -12,6 +12,7 @@ class MembershipFactory{
         static MembershipFactory* instance;
         static map<string,Membership>pool;
         MembershipFactory();
+        ~MembershipFactory();
   
   public:
     static void createMembership(string _typeOfMembership,double _fees,double _discount);

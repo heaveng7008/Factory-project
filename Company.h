@@ -14,4 +14,5 @@ class Company{
     void addCustomer();
 
     void displayCustomers();
+    ~Company();
 };

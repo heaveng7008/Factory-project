@@ -89,3 +89,9 @@ void Company::displayCustomers(){
     report.DisplayCustomers(_customers);
 
 }
+
+Company::~Company(){
+    for(int i=0; i<_customers.size(); i++){
+        delete _customers[i];
+    }
+}
