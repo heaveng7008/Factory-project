@@ -1,9 +1,16 @@
 #pragma once
 
-#include<bits/stdc++.h>
+#include<string>
+#include<vector>
+
+#include "Customer.h"
+#include "RegCustomer.h"
+
+#include "MembershipFactory.h"
+#include "CustomerReport.h"
 #include "Customer.h"
 using namespace std;
-
+namespace Meteors{
 class Company{
     string _name;
     vector<Customer*> _customers;
@@ -16,3 +23,4 @@ class Company{
     void displayCustomers();
     ~Company();
 };
+}

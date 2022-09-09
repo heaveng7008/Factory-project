@@ -1,12 +1,12 @@
 #pragma once
 
-#include <iostream>
+//#include <iostream>
 #include <string>
 #include <map>
 #include "Membership.h"
 
 using namespace std;
-
+namespace Meteors{
 class MembershipFactory{
     private:
         static MembershipFactory* instance;
@@ -20,3 +20,4 @@ class MembershipFactory{
     static Membership getMembership(string typeOfMembership);
     
 };
+}

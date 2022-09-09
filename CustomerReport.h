@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 using namespace std;
 
@@ -6,7 +8,7 @@ using namespace std;
 #include "RegCustomer.h"
 #include "Customer.h"
 #include "Company.h"
-
+namespace Meteors{
 class CustomerReport
 	{
 		string _reportDate;
@@ -18,3 +20,4 @@ class CustomerReport
             void DisplayCustomers(vector<Customer*> customers);
             void SetReportDate(string date);
 	};
+}

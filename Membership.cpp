@@ -1,10 +1,10 @@
 #include "Membership.h"
-
-string Membership::getTypeOfMembership()
+namespace Meteors{
+std::string Membership::getTypeOfMembership()
 {
     return _typeOfMembership;
 }
-void Membership::setTypeOfMembership(string typeOfMembership)
+void Membership::setTypeOfMembership(std::string typeOfMembership)
 {
     _typeOfMembership = typeOfMembership;
 }
@@ -20,4 +20,5 @@ void Membership::setFees(double fees)
 double Membership::getDiscount()
 {
     return _discount;
+}
 }

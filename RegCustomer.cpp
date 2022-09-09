@@ -1,5 +1,5 @@
 #include "RegCustomer.h"
-
+namespace Meteors{
 RegCustomer::RegCustomer()
 {
 
@@ -22,4 +22,6 @@ void RegCustomer::setMembership(Membership membership)
 
 Membership RegCustomer::getMembership(){
     return _membership;
+}
+
 }

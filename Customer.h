@@ -1,20 +1,20 @@
 #pragma once
-
-#include<bits/stdc++.h>
-using namespace std;
-
+#include<string>
+//using namespace std;
+namespace Meteors{
 class Customer{
-    string _custId;
-    string _name;
-    string _email;
+    std::string _custId;
+    std::string _name;
+    std::string _email;
 
     public:
     Customer();
-    string getCustId();
-    void setCustId(string custId);
-    void setName(string name);
-    string getName();
-    void setEmail(string email);
-    string getEmail();
+    std::string getCustId();
+    void setCustId(std::string custId);
+    void setName(std::string name);
+    std::string getName();
+    void setEmail(std::string email);
+    std::string getEmail();
     virtual ~Customer(){}
 };
+}

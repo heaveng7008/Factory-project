@@ -1,5 +1,5 @@
 #include "MembershipFactory.h"
-
+namespace Meteors{
     MembershipFactory* MembershipFactory::instance;
     map<string,Membership> MembershipFactory::pool;
 
@@ -27,6 +27,7 @@
         return pool[typeOfMembership];
     }
 
-    MembershipFactory::~Membership(){
+    MembershipFactory::~MembershipFactory(){
       delete MembershipFactory::instance;
     }
+}

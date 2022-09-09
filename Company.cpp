@@ -1,9 +1,6 @@
-#include "Customer.h"
-#include "RegCustomer.h"
 #include "Company.h"
-#include "MembershipFactory.h"
-#include "CustomerReport.h"
 
+namespace Meteors{
 Company::Company(){ 
     //empty
 }
@@ -94,4 +91,6 @@ Company::~Company(){
     for(int i=0; i<_customers.size(); i++){
         delete _customers[i];
     }
+}
+
 }

@@ -1,35 +1,36 @@
 #include "Customer.h"
-
+namespace Meteors{
 Customer::Customer(){
 
 }
 
-string Customer::getCustId()
+std::string Customer::getCustId()
 {
     return _custId;
 }
 
-string Customer::getName()
+std::string Customer::getName()
 {
     return _name;
 }
 
-void Customer::setCustId(string custId)
+void Customer::setCustId(std::string custId)
 {
     _custId = custId;
 }
 
-void Customer::setName(string name)
+void Customer::setName(std::string name)
 {
     _name = name;
 }
 
-void Customer::setEmail(string email)
+void Customer::setEmail(std::string email)
 {
    _email=email;
 }
 
-string Customer::getEmail(){
+std::string Customer::getEmail(){
 
     return _email;
+}
 }

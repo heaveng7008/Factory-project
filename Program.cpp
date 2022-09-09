@@ -1,6 +1,6 @@
 
 #include "Program.h"
-
+using namespace Meteors;
 int main(){
 
     Company comp;
@@ -16,4 +16,5 @@ int main(){
 
     return 0;
 }
+
 
