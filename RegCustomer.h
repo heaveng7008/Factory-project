@@ -1,11 +1,11 @@
 #pragma once
 
-#include<bits/stdc++.h>
+#include<string>
 using namespace std;
 
 #include "Membership.h"
 #include "Customer.h"
-
+namespace Meteors{
 class RegCustomer : public Customer{
     string _dtReg;
     string _typeOfMembership;
@@ -20,3 +20,4 @@ class RegCustomer : public Customer{
 
     //email
 };
+}

@@ -1,19 +1,20 @@
 #pragma once
 
 #include <string>
-using namespace std;
-
+//using namespace std;
+namespace Meteors{
 class Membership{
-  string _typeOfMembership;
+  std::string _typeOfMembership;
   double _discount;
   double _fees;
   
   public:
-   void setTypeOfMembership(string typeOfMembership);
+   void setTypeOfMembership(std::string typeOfMembership);
    void setDiscount(double discount);
    void setFees(double fees);
-   string getTypeOfMembership();
+   std::string getTypeOfMembership();
    double getDiscount();
    double getFees();
     
 };
+}
