@@ -4,7 +4,7 @@
 namespace Meteors{
 void CustomerReport::PrintLine()
 {
-    cout << "------------------------------------------------------------------------------------------" << endl;
+    cout << "-------------------------------------------------------------------------------------------------------" << endl;
 }
 
 void CustomerReport::DisplayHeader()
@@ -26,25 +26,25 @@ void CustomerReport::DisplayCustomers(vector<Customer*> customers)
 {
     DisplayHeader();
 
-    cout << "S.NO\tCUS_ID\tNAME\tEMAIL\t\t\t\tMEMBERSHIP\tDATE REGISTERED" << endl;
+    cout << "S.NO\tCUS_ID\t\tNAME\t\tEMAIL\t\t\tMEMBERSHIP\t\tDATE REGISTERED" << endl;
     PrintLine();
 
     int count = customers.size();
     for(int i=0; i<count; i++){
         cout<<i+1<<". "<<"\t";
-        cout<<customers[i]->getCustId()<<"\t";
-        cout<<customers[i]->getName()<<"\t";
-        cout<<customers[i]->getEmail()<<"\t\t";
+        cout<<customers[i]->getCustId()<<"\t\t";
+        cout<<customers[i]->getName()<<"\t\t";
+        cout<<customers[i]->getEmail()<<"\t";
 
 
         RegCustomer *rcc= dynamic_cast<RegCustomer *>(customers[i]);
         if(rcc != NULL){
-            cout<<rcc->getMembership().getTypeOfMembership()<<"\t";
-            cout<<rcc->getDtReg()<<"\t";
+            cout<<rcc->getMembership().getTypeOfMembership()<<"\t\t\t";
+            cout<<rcc->getDtReg();
         }
         else{
-            cout<<"\t"<<"NA"<<"\t\t";
-            cout<<"NA"<<"\t";
+            cout<<"NA"<<"\t\t\t";
+            cout<<"NA";
         }
         cout<<endl;
     }
