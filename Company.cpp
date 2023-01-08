@@ -6,7 +6,7 @@ Company::Company(){
 }
 
 void Company::setName(string name)
-{
+{//aa
     _name = name;
 }
 
